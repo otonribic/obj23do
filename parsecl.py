@@ -56,7 +56,7 @@ def parsecl(params, switch='/', paramdel=':', escaper='"', capswitches=True):
                 result[paramname.strip()] += char
 
     # Clean up
-    for key in result.keys():
+    for key in list(result.keys()):
         result[key] = result[key].strip()
         if capswitches:
             result[key.upper()] = result.pop(key)
